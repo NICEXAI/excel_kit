@@ -9,7 +9,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  excel_kit: 0.0.1
+  excel_kit: ^1.0.0-null-safety-1
 ```
 
 ### 2. Install it
