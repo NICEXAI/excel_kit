@@ -21,11 +21,11 @@ void main() {
 
     // get title list
     var fieldList = sheet.getFieldList();
-    print(jsonEncode(fieldList));
+    print("title: ${jsonEncode(fieldList)}");
 
     // get data list
     var dataList = sheet.getDataList();
-    print(jsonEncode(dataList));
+    print("data: ${jsonEncode(dataList)}");
   });
 
   test("Write xlsx file", () {
