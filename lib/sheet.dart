@@ -1,3 +1,11 @@
+class SheetOption {
+  late String name;
+  late List<Map> dataList;
+  late Map<String, String>? fieldMap;
+
+  SheetOption(this.name, this.dataList, {this.fieldMap});
+}
+
 class ISheet {
   late List<String> _fieldList;
   late List<Map> _dataList;

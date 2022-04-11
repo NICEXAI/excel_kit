@@ -8,7 +8,7 @@ class IExcel {
     _sheetMap = sheetMap;
   }
 
-  ISheet getSheet(String name, Map? fieldMap) {
+  ISheet getSheet(String name, {Map? fieldMap}) {
     var sheet = _sheetMap[name];
 
     if (sheet == null) {
@@ -16,8 +16,8 @@ class IExcel {
     }
 
     var fieldDict = {};
-    if(fieldMap != null) {
-      for(var key in fieldMap.keys) {
+    if (fieldMap != null) {
+      for (var key in fieldMap.keys) {
         fieldDict[fieldMap[key]] = key;
       }
     }
@@ -30,7 +30,7 @@ class IExcel {
       var row = sheet.rows[i];
 
       // parse field
-      if(i == 0) {
+      if (i == 0) {
         for (var j = 0; j < row.length; j++) {
           var info = row[j];
           var value = info?.value;
@@ -53,7 +53,7 @@ class IExcel {
         var info = row[j];
         var value = info?.value;
 
-        if(fieldIndexMap[j] == null) {
+        if (fieldIndexMap[j] == null) {
           continue;
         }
 
